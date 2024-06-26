@@ -50,10 +50,10 @@ function sumArray(arr,cur) {
     return arr[cur] + sumArray(arr,cur+1);
 }
 
-// Example usage:
+
 let array = [1, 2, 3, 4, 5];
 let result = sumArray(array,0);
-console.log("Sum of array:", result); // Output: 15
+console.log("Sum of array:", result); 
 
 
 
@@ -96,17 +96,11 @@ class LinkedList {
         console.log(result);
     }
 
-    getSize() {
-        return this.size;
-    }
-
-    isEmpty() {
-        return this.size === 0;
-    }
+   
 }
-function reverseLinkedList(ll) {
+function reverseLinkedList(ss) {
     let prev = null;
-    let current = ll.head;
+    let current = ss.head;
     let next = null;
 
     while (current !== null) {
@@ -116,19 +110,19 @@ function reverseLinkedList(ll) {
         current = next;    
     }
 
-    ll.head = prev; 
+    ss.head = prev; 
 }
 
-// Example usage:
-let ll = new LinkedList();
-ll.add(1);
-ll.add(2);
-ll.add(3);
-ll.add(4);
 
-ll.printList();
-
-reverseLinkedList(ll);
+let ss = new LinkedList();
+ss.add(1);
+ss.add(2);
+ss.add(3);
+ss.add(4);
 
 
-ll.printList();
+
+reverseLinkedList(ss);
+
+
+ss.printList();
